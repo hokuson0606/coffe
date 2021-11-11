@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 img {
   width: 100%;
 }
@@ -31,9 +35,9 @@ h2 {
 h3 {
   font-size: 40px;
   font-weight: bold;
+  display: inline-block;
   border-bottom: 4px solid red;
-  width: 30%;
-  margin: 0 auto 30px;
+  margin: 0 auto 70px;
 }
 
 p {
@@ -42,7 +46,7 @@ p {
 
 section {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   text-align: center;
 }
 
@@ -52,15 +56,16 @@ dl {
 }
 
 dt {
-  width: 87%;
+  width: 80%;
   text-align: left;
   border-bottom: dotted 1px black;
-  margin-bottom: 25px;
+  margin: 0 0 25px 20px;
 }
 
 dd {
   width: 13%;
   text-align: right;
+  margin: 0;
 }
 
 header {
@@ -77,20 +82,37 @@ header {
 
 .mainvisual {
   margin: 0 0 50px;
-  min-height: 50vh;
+  min-height: 70vh;
   background-size: cover;
   text-align: center;
   background-attachment: fixed;
-  background-image: url(img/drink.jpeg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: inherit;
 }
 
+.menu-img {
+  background-image: url(img/drink.jpeg);
+}
+
+.about-img {
+  background-image: url(img/about.jpeg);
+  margin-bottom: 100px;
+}
+
+.location-img {
+  background-image: url(img/location.jpeg);
+  margin-bottom: 100px;
+}
+
 .menu {
   display: flex;
   justify-content: space-around;
+  text-align: center;
+}
+
+.menu-title {
   text-align: center;
 }
 
@@ -102,4 +124,104 @@ header {
 
 .menu-item:first-child {
   border-right: solid 1px black;
+}
+
+.read {
+  width: 160px;
+  height: 50px;
+  line-height: 3.5;
+  display: inline-block;
+  color: #000;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.read::before {
+  width: 2px;
+  height: 50%;
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+.read span::before {
+  width: 2px;
+  height: 50%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+.read span::after {
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+.read::after {
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e03131;
+  transition: all 0.3s ease;
+}
+
+.read span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.txt {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.txt li {
+  width: 50%;
+  padding: 3%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.map {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.map-txt {
+  text-align: left;
+}
+
+.ourstore {
+  margin-bottom: 120px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 10px;
 }
